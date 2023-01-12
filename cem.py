@@ -23,7 +23,11 @@ def batch_cov(batch: torch.Tensor) -> torch.Tensor:
 
 
 class CEM:
-    """
+    """An optimization solver based on Cross Entropy Method under Pytorch. 
+
+    This CEM solver supports batch dimension of observations, and can solve receding
+    horizon style model predictive control problems. If only one step cost is to be
+    considered, just set horizon to be one. 
     """
     def __init__(
         self, 
