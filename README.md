@@ -8,11 +8,9 @@ The CEM is a Monte Carlo method for optimization.
 This repo is for continuous problems. 
 Specifically, this CEM solver can solve the optimization problem as below:
 $$
-\begin{align*}
-    \min_a \; & \mathcal{C}_{f}(s_H) + \sum_{k=0}^{H-1} \mathcal{C}(s_k, a_k) \\
-    \text{s.t.}\;\;&s_{k+1} = f(s_k, a_k), \; k=\{0, 1, \dots, H-1\} \\
-    &s_0 = s_{\text{init}}
-\end{align*}
+    \min_a \;  \mathcal{C}_{f}(s_H) + \sum_{k=0}^{H-1} \mathcal{C}(s_k, a_k) \\
+    \text{s.t.}\;\;s_{k+1} = f(s_k, a_k), \; k=\{0, 1, \dots, H-1\} \\
+    s_0 = s_{\text{init}}
 $$
 where $s_t$ and $a_t$ are the states and actions at time step $k$, $s_\text{init}$ is the initial condition. $H$ is the horizon, $\mathcal{C}(\cdot)$ is the cost function, $\mathcal{C}_f(\cdot)$ is the terminal cost function, and $f(\cdot)$ is the dynamics function. 
 
